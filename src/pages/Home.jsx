@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import axios from "axios";
 
 import BannerHome from "../components/BannerHome";
 import HorizontalScrollCard from "../components/HorizontalScrollCard";
@@ -17,10 +15,10 @@ const Home = () => {
     <div>
       <BannerHome/>
       <HorizontalScrollCard data={trendingData} heading={"Trending"} trending={true} />
-      <HorizontalScrollCard data={nowPlayingData} heading={"Now Playing"} trending={false} />
-      <HorizontalScrollCard data={topRatedData} heading={"Top Rated Movies"} trending={false} />
-      <HorizontalScrollCard data={popularTvShowData} heading={"Popular TV Show"} trending={false} />
-      <HorizontalScrollCard data={onTheAirShowData} heading={"On The Air"} trending={false} />
+      <HorizontalScrollCard data={nowPlayingData} heading={"Now Playing"} trending={false} media_type={"movie"} />
+      <HorizontalScrollCard data={topRatedData} heading={"Top Rated Movies"} trending={false} media_type={"movie"} />
+      <HorizontalScrollCard data={popularTvShowData} heading={"Popular TV Show"} trending={false} media_type={"tv"} />
+      <HorizontalScrollCard data={onTheAirShowData} heading={"On The Air"} trending={false} media_type={"tv"} />
     </div>
   )
 }
